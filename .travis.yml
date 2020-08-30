@@ -15,3 +15,8 @@ before_script:
 
 script:
   - vendor/bin/phpunit
+
+deploy:
+  provider: heroku
+  api_key: 91992a76-30a0-485c-be71-1f38ca0ad46f
+  app: laravelheroku233
