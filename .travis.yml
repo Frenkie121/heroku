@@ -2,7 +2,8 @@ language: php
 php:
   - 7.4.6
 install:
-  - composer install
+  # - composer install
+  - composer install --prefer-dist --optimize-autoloader --quiet
 cache:
   directories:
     - vendor
