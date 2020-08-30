@@ -1,22 +1,8 @@
 language: php
 php:
-  - 7.4.6
-install:
-  # - composer install
-  - composer install --prefer-dist --optimize-autoloader --quiet
-cache:
-  directories:
-    - vendor
-
+  - 7.2
 before_script:
   - composer self-update
   - composer install --no-interaction
-  - php artisan key:generate --env testing
-
 script:
-  - vendor/bin/phpunit
-
-deploy:
-  provider: heroku
-  api_key: 91992a76-30a0-485c-be71-1f38ca0ad46f
-  app: laravelheroku233
+  - vendor/bin/phpunit 
